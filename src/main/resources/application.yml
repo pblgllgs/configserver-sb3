@@ -3,11 +3,6 @@ server:
 spring:
   application:
     name: configserver
-  rabbitmq:
-    host: ${RABBITMQ_HOST:localhost}
-    port: 5672
-    username: guest
-    password: guest
   profiles:
     active: git
   cloud:
@@ -16,7 +11,7 @@ spring:
         git:
           clone-on-start: true
           uri: https://github.com/pblgllgs/config-files-properties-bank-sb3.git
-          default-label: master
+          default-label: v2
           timeout: 5
           force-pull: true
 encrypt:
