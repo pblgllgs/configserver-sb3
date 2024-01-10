@@ -3,6 +3,11 @@ server:
 spring:
   application:
     name: configserver
+  rabbitmq:
+    host: ${RABBITMQ_HOST:localhost}
+    port: 5672
+    username: guest
+    password: guest
   profiles:
     active: git
   cloud:
@@ -16,3 +21,8 @@ spring:
           force-pull: true
 encrypt:
   key: 4oc17UQaN99870H82YvNqN09FrgGKp26XDgAX3u9k0ki6S38x1o5P7yxgAMHq89a7k8XDS
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
