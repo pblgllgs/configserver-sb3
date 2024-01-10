@@ -1,0 +1,18 @@
+server:
+  port: 8071
+spring:
+  application:
+    name: configserver
+  profiles:
+    active: git
+  cloud:
+    config:
+      server:
+        git:
+          clone-on-start: true
+          uri: https://github.com/pblgllgs/config-files-properties-bank-sb3.git
+          default-label: master
+          timeout: 5
+          force-pull: true
+encrypt:
+  key: 4oc17UQaN99870H82YvNqN09FrgGKp26XDgAX3u9k0ki6S38x1o5P7yxgAMHq89a7k8XDS
