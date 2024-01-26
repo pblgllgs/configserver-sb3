@@ -11,7 +11,7 @@ spring:
         git:
           clone-on-start: true
           uri: https://github.com/pblgllgs/config-files-properties-bank-sb3.git
-          default-label: v3
+          default-label: v3-rabbit
           timeout: 5
           force-pull: true
 encrypt:
